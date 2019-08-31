@@ -1,0 +1,6 @@
+ACCESS_TOKEN=1488
+VAULT=/path/to/storage
+DOCTORS=/path/to/doctors/file.jpg #to remove
+DIALOGUE_CFG_PATH=/path/to/dialogue/cfg.json
+LOG_FILE=/log/path/path
+START_DATE_API_URL=https://bmstu-schedule.ru/start_date

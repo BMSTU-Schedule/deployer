@@ -1,0 +1,4 @@
+ACCESS_TOKEN=1488
+BOT_LOG=1
+VAULT_PATH=/path/to/storage
+DIALOGUE_CFG_PATH=/path/to/dialogue/cfg.json
