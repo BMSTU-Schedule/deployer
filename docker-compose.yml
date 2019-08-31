@@ -4,6 +4,7 @@ services:
     restart: always
     build:
       context: ./vk-bmstu-schedule-bot/
+    env_file: vkbot_conf.yml
     volumes: 
       - "/var/bs_vault:/var/bs_vault"
     entrypoint: ./vk-bmstu-schedule-bot
@@ -12,6 +13,7 @@ services:
     restart: always
     build:
       context: ./telegram-bmstu-schedule-bot/
+    env_file: tgbot_conf.yml
     volumes:
       - "/var/bs_vault:/var/bs_vault"
     entrypoint: python3 -u main.py
