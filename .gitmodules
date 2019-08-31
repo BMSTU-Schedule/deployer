@@ -1,0 +1,12 @@
+[submodule "vk-bmstu-schedule-bot"]
+	path = vk-bmstu-schedule-bot
+	url = git@github.com:BMSTU-Schedule/vk-bmstu-schedule-bot.git
+[submodule "telegram-bmstu-schedule-bot"]
+	path = telegram-bmstu-schedule-bot
+	url = git@github.com:BMSTU-Schedule/telegram-bmstu-schedule-bot.git
+[submodule "bmstu-schedule-photo"]
+	path = bmstu-schedule-photo
+	url = git@github.com:BMSTU-Schedule/bmstu-schedule-photo.git
+[submodule "web"]
+	path = web
+	url = git@github.com:BMSTU-Schedule/web.git
