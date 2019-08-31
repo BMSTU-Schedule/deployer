@@ -1,6 +1,6 @@
 version: '3.7'
 services:
-  vkbs_bot_test:
+  vkbs_bot:
     restart: always
     build:
       context: git@github.com:BMSTU-Schedule/vk-bmstu-schedule-bot.git
@@ -9,7 +9,7 @@ services:
       - "/var/bs_vault:/var/bs_vault"
     entrypoint: ./vk-bmstu-schedule-bot
 
-  tgbs_bot_test:
+  tgbs_bot:
     restart: always
     build:
       context: git@github.com:BMSTU-Schedule/telegram-bmstu-schedule-bot.git
@@ -18,7 +18,7 @@ services:
       - "/var/bs_vault:/var/bs_vault"
     entrypoint: python3 -u main.py
   
-  bs_web_test:
+  bs_web:
     restart: always
     build:
       context: git@github.com:BMSTU-Schedule/bmstu-schedule-web.git
