@@ -3,7 +3,7 @@ services:
   vkbs_bot_test:
     restart: always
     build:
-      context: ./vk-bmstu-schedule-bot/
+      context: git@github.com:BMSTU-Schedule/vk-bmstu-schedule-bot.git
     env_file: vkbot_conf.yml
     volumes: 
       - "/var/bs_vault:/var/bs_vault"
@@ -12,7 +12,7 @@ services:
   tgbs_bot_test:
     restart: always
     build:
-      context: ./telegram-bmstu-schedule-bot/
+      context: git@github.com:BMSTU-Schedule/telegram-bmstu-schedule-bot.git
     env_file: tgbot_conf.yml
     volumes:
       - "/var/bs_vault:/var/bs_vault"
@@ -21,7 +21,7 @@ services:
   bs_web_test:
     restart: always
     build:
-      context: ./bmstu-schedule-web
+      context: git@github.com:BMSTU-Schedule/bmstu-schedule-web.git
     volumes:
       - "/var/bs_vault:/ics"
     ports:
