@@ -4,7 +4,7 @@ services:
     restart: always
     build:
       context: git@github.com:BMSTU-Schedule/vk-bmstu-schedule-bot.git
-    env_file: vkbot_conf.yml
+    env_file: vkbot_conf.env
     volumes: 
       - "/var/bs_vault:/var/bs_vault"
     entrypoint: ./vk-bmstu-schedule-bot
@@ -13,7 +13,7 @@ services:
     restart: always
     build:
       context: git@github.com:BMSTU-Schedule/telegram-bmstu-schedule-bot.git
-    env_file: tgbot_conf.yml
+    env_file: tgbot_conf.env
     volumes:
       - "/var/bs_vault:/var/bs_vault"
     entrypoint: python3 -u main.py
