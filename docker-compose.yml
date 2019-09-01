@@ -6,7 +6,7 @@ services:
       context: git@github.com:BMSTU-Schedule/vk-bmstu-schedule-bot.git
     env_file: vkbot_conf.env
     volumes: 
-      - "/var/bs_vault:/var/bs_vault"
+      - /var/bs_vault:/var/bs_vault
     depends_on:
       - database
 
@@ -16,7 +16,7 @@ services:
       context: git@github.com:BMSTU-Schedule/telegram-bmstu-schedule-bot.git
     env_file: tgbot_conf.env
     volumes:
-      - "/var/bs_vault:/var/bs_vault"
+      - /var/bs_vault:/var/bs_vault
     entrypoint: python3 -u main.py
   
   bs_web:
@@ -24,7 +24,7 @@ services:
     build:
       context: git@github.com:BMSTU-Schedule/bmstu-schedule-web.git
     volumes:
-      - "/var/bs_vault:/ics"
+      - /var/bs_vault:/ics
     ports:
       - "8000:8000"
 
@@ -33,4 +33,4 @@ services:
     image: postgres:11
     env_file: database_conf.env
     volumes:
-      - ~/var/bs_vault/postgres:/var/lib/postgresql/data
+      - /var/bs_vault/postgres:/var/lib/postgresql/data
