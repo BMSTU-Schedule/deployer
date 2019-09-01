@@ -31,6 +31,6 @@ services:
   database_test:
     restart: always
     image: postgres:11
-    env_file: database_conf.yml
+    env_file: database_conf.env
     volumes:
       - ~/var/bs_vault/postgres:/var/lib/postgresql/data
