@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3'
 services:
   vkbs_bot:
     restart: always
@@ -7,6 +7,8 @@ services:
     env_file: vkbot_conf.env
     volumes: 
       - "/var/bs_vault:/var/bs_vault"
+    depends_on:
+      - database_test
 
   tgbs_bot:
     restart: always
@@ -25,3 +27,10 @@ services:
       - "/var/bs_vault:/ics"
     ports:
       - "8000:8000"
+
+  database_test:
+    restart: always
+    image: postgres:11
+    env_file: database_conf.yml
+    volumes:
+      - ~/var/bs_vault/postgres:/var/lib/postgresql/data
