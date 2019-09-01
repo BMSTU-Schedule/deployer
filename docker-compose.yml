@@ -7,7 +7,6 @@ services:
     env_file: vkbot_conf.env
     volumes: 
       - "/var/bs_vault:/var/bs_vault"
-    entrypoint: ./vkbot
 
   tgbs_bot:
     restart: always
